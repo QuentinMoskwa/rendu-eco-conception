@@ -49,16 +49,16 @@ Cette table contient les colonnes suivantes :
 - id : int, auto increment, primary key
 - title : varchar(255)
 - description : text
-- date : date
-- location : varchar(255)
+- date : datetime
+- location : text
 
 Et les colonnes created_at et updated_at qui sont gérées par Sequelize.
 
-Il y a un choix qui a été réfléchi pour les types de données, nous avons décidé de mettre le type date pour la colonne date,
+Il y a un choix qui a été réfléchi pour les types de données, nous avons décidé de mettre le type datetime pour la colonne date,
 car cela permet de ne pas avoir à gérer les dates dans le code et de ne pas avoir à faire de conversion de type.
 Le title et la description ne possède pas le même type parce que le title est un champ qui est plus court et qui ne nécessite pas de stocker beaucoup de données,
 ce serait donc inutile de mettre un type text pour le title, car on perdrait en performances (même si c'est très minime).
-L'idée est la même pour la location. 
+Contrairement à la location qui utilise aussi le text. 
 Pour finir, l'id est un int car c'est un identifiant et que c'est un type de données qui est plus rapide à traiter.
 
 ## Encodage
@@ -78,7 +78,7 @@ EXPRESS :
 
 ## LightHouse
 
-Nous avons aussi utilisé LightHouse afin de mesurer les performances de noter application web.
+Nous avons aussi utilisé LightHouse afin de mesurer les performances et les bonnes pratiques de notre application web.
 
 ### Desktop
 
@@ -113,7 +113,7 @@ npm install
 ## Lancement
 
 ```sh
-npm run build
+node server
 ```
 
 
