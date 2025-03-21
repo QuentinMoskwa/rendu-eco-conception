@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database (si jamais tu as des fichiers SQLite ou autres)
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Build files
+dist/
+build/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Sequelize migrations & seeders (si tu veux les ignorer, à adapter selon ton besoin)
+migrations/
+seeders/
