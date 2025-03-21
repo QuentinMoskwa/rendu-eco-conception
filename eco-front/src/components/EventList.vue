@@ -23,9 +23,9 @@ onMounted(fetchEvents);
 
 <template>
   <div>
-    <h2>Liste des événements</h2>
+    <h2>Liste des événements :</h2>
     <ul>
-      <li v-for="event in events" :key="event.id">
+      <li v-for="event in events" :key="event.id">  
         {{ event.title }} - {{ event.date }} - {{ event.location }}
       </li>
     </ul>

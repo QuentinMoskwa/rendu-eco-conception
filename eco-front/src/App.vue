@@ -4,7 +4,6 @@ import EventForm from "./components/EventForm.vue";
 </script>
 
 <template>
-  <h1>Événements à venir</h1>
-  <EventForm />
   <EventList />
+  <EventForm />
 </template>
