@@ -11,10 +11,13 @@ const addEvent = async () => {
   const newEvent = { title: title.value, date: date.value, location: location.value };
 
   try {
-    const response = await fetch("http://localhost:3000/events", { //à remplacer
+    const response = await fetch("http://localhost:3000/events", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newEvent),
+      headers: { 
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
+      body: JSON.stringify({ event: newEvent }),
     });
 
     if (!response.ok) throw new Error("Erreur lors de l'ajout de l'événement");

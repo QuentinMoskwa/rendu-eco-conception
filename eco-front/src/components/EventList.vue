@@ -5,7 +5,12 @@ const events = ref([]);
 
 const fetchEvents = async () => {
   try {
-    const response = await fetch("http://localhost:3000/events"); // à remplacer
+    const response = await fetch("http://localhost:3000/events", {
+  headers: {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  },
+});
     if (!response.ok) throw new Error("Erreur lors du chargement des événements");
     events.value = await response.json();
   } catch (error) {

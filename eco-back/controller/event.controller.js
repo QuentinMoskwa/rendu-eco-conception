@@ -2,6 +2,7 @@ const Event = require("../model/event.model.js");
 require("dotenv").config();
 
 exports.addEvent = async (req, res, next) => {
+  console.log("Données reçues :", req.body); 
   try {
     if (!req.body.event) {
       return res
