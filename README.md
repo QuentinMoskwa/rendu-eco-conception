@@ -4,7 +4,7 @@ Ce projet est un site web qui a pour but de nous sensibiliser à l'écologie dan
 Pour cela, nous avons eu comme sujet de créer un site web qui serait éco-conçue qui nous permettrait de consulter et ajouter des
 événements à venir.
 
-# Technologies utilisées
+## Technologies utilisées
 
 Nous avons décidé d'utiliser Vue.js en tant que framework pour la partie front-end et Express pour la partie back-end.
 
@@ -30,7 +30,7 @@ CORS est une librairie qui permet de gérer les requêtes HTTP entre différents
 Dans notre utilisation elle nous permettrait de mieux configurait notre serveur et de mieux gérer les requêtes.
 Par exemple en limitant les requêtes préliminaires.
 
-# BDD
+## BDD
 
 Tout d'abord lors de la création de notre base de données, nous avons décidé d'utiliser MySQL2 pour la gestion de notre base de données.
 MYSQL2 est simplement plus optimisé que MySQL et permet de gérer plus de requêtes en même temps, il support les async et await.
@@ -66,42 +66,56 @@ Pour finir, l'id est un int car c'est un identifiant et que c'est un type de don
 L'encodage de la base de données est en utf8mb3_general_ci, cela permet de supporter les caractères spéciaux.
 Pourquoi le mb3 plutôt que le mb4 ? Car le mb4 est plus lourd et que nous n'avons pas besoin de supporter les émojis.
 
-# Déploiement
+## Sources
 
-## Type Support for `.vue` Imports in TS
+VUE :
+- https://fr.vuejs.org/guide/extras/rendering-mechanism
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+EXPRESS :
+- https://www.geeksforgeeks.org/express-js/?ref=shm
+- https://laconsole.dev/formations/express/fichiers-statiques
+- https://node-js.fr/express/middleware.html
 
-## Customize configuration
+## LightHouse
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Nous avons aussi utilisé LightHouse afin de mesurer les performances de noter application web.
 
-## Project Setup
+### Desktop
+
+![/img.png](img/imgDesktop.png)
+
+### Mobile
+
+![/img.png](img/imgMobile.png)
+
+# Déploiement FRONT
+
+## Installation
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Lancement
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+# Déploiement BACK
+
+## Installation
+
+```sh
+npm install
+```
+
+## Lancement
 
 ```sh
 npm run build
 ```
 
 
-# Sources
 
-VUE : 
-    - https://fr.vuejs.org/guide/extras/rendering-mechanism
-EXPRESS : 
-    - https://www.geeksforgeeks.org/express-js/?ref=shm
-    - https://laconsole.dev/formations/express/fichiers-statiques
-    - https://node-js.fr/express/middleware.html
 
-Nous avons aussi utilisé LightHouse afin de mesurer les performances de noter application web.
