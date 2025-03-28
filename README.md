@@ -38,8 +38,8 @@ MYSQL2 est simplement plus optimisé que MySQL et permet de gérer plus de requ�
 De plus, nous avons utilisé Sequelize, c'est un ORM qui permet de simplifier la gestion de la base de données.
 Nous avons décidé de rester sur celui-ci, car le gain performances/ressources est très intéressant et permet de simplifier la gestion de la base de données.
 
-D'une autre part, nous avons fait le choix de prendre InnoDB comme moteur de stockage pour notre base de données.
-InnoDB est un moteur de stockage qui fait moins d'opérations inutiles que MyISAM, donc le choix était évident.
+D'autre part, nous avons fait le choix d'utiliser MyISAM comme moteur de stockage pour notre base de données.
+MyISAM est un moteur plus léger et plus rapide en lecture que InnoDB ce qui est adapté à notre projet, qui ne nécessite ni gestion des transactions ni clés étrangères.
 
 ## Type de données 
 
